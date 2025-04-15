@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 内联代码块样式 */
+:not(pre) > code {
+  background-color: #f3f4f6;
+  color: #ef4444;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 85%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* 暗色模式适配 */
+.dark :not(pre) > code {
+  background-color: #374151;
+  color: #f472b6;
+}
+
+/* 亮色模式下的代码块样式 */
+pre code.hljs {
+ border-radius: 5px;
+}
+
+/* 确保代码块在模式切换时平滑过渡 */
+pre code.hljs {
+  transition: background-color 0.3s ease;
+}
+
+a {
+  color: #002FA7; /* 克莱因蓝的HEX值 */
+}

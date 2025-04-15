@@ -60,7 +60,9 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <ThemeSwitcher />
+        <div style={{ position: "fixed", right: "2%", top: "2%" }}>
+          <ThemeSwitcher />
+        </div>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
